@@ -10,7 +10,7 @@ import DavidFoundation
 import Foundation
 
 /// A representation of a Homebrew package
-struct BrewPackage: Identifiable, Equatable, Hashable
+struct BrewPackage: Identifiable, Equatable, Hashable, Codable
 {
     var id: UUID = .init()
     let name: String

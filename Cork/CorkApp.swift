@@ -60,6 +60,15 @@ struct CorkApp: App
 
     var body: some Scene
     {
+        WindowGroup(for: BrewPackage.self)
+        { $packageToPreview in
+            if let packageToPreview
+            {
+                Text(packageToPreview.name)
+            }
+        }
+        .windowStyle(.hiddenTitleBar)
+        
         Window("Main Window", id: .mainWindowID)
         {
             ContentView()
